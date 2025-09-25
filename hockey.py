@@ -63,8 +63,8 @@ st.title("Teorema del Hockey-Stick en el Triángulo de Pascal")
 # Controles interactivos
 filas = st.slider("Número de filas del triángulo", min_value=5, max_value=20, value=12)
 r = st.slider("Columna donde empieza el palo (r)", min_value=0, max_value=filas-2, value=3)
-n = st.slider("Fila final del mango (n)", min_value=r, max_value=filas-2, value=7)
-
+n = st.slider("Longitud de palo", min_value=1, max_value=filas-r-2, value=4)
+n=r+n
 # Dibujar figura
 fig = plot_hockey_stick(filas, r, n)
 st.pyplot(fig)
