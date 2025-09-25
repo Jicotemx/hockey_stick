@@ -47,7 +47,7 @@ def plot_hockey_stick(filas, r, n):
     # Mostrar igualdad numérica
     suma = sum(tri[i][r] for i in range(r, n+1))
     punta_valor = tri[punta_coord[0]][punta_coord[1]] if punta_coord else "fuera"
-    ax.set_title(f"Suma del palo = {suma}, Punta = {punta_valor}", fontsize=14)
+    # ax.set_title(f"Suma del palo = {suma}, Punta = {punta_valor}", fontsize=14)
 
     # Ajustar límites para que siempre se vea todo
     ax.set_xlim(-filas/2 - 1, filas/2 + 1)
@@ -63,8 +63,8 @@ st.title("Teorema del Hockey-Stick en el Triángulo de Pascal")
 # Controles interactivos
 filas = st.slider("Número de filas del triángulo", min_value=5, max_value=20, value=12)
 r = st.slider("Columna donde empieza el palo (r)", min_value=0, max_value=filas-2, value=3)
-n = st.slider("Longitud de palo", min_value=1, max_value=filas-r-2, value=4)
-n=r+n
+n = st.slider("Longitud de palo", min_value=2, max_value=filas-r-2, value=4)
+n=r+n-2
 # Dibujar figura
 fig = plot_hockey_stick(filas, r, n)
 st.pyplot(fig)
