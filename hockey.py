@@ -50,7 +50,7 @@ def plot_hockey_stick(filas, r, longitud):
 # Interfaz Streamlit
 # =====================
 st.set_page_config(page_title="Teorema del Hockey-Stick", layout="wide")
-st.title("Teorema del Hockey-Stick en el Triángulo de Pascal")
+st.title("Identidad del palo de hockey o del Calcetín de Navidad")
 
 # Lista de filas del triángulo
 filas = st.selectbox("Número de filas del triángulo", options=list(range(5,21)), index=7)
