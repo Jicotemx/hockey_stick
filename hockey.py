@@ -52,7 +52,7 @@ st.set_page_config(page_title="Identidad del palo de hockey", layout="centered")
 st.title("Identidad del palo de hockey o del Calcetín de Navidad")
 
 # Selección de número de filas
-filas = st.selectbox("Número de filas del triángulo", options=list(range(5,13)), index=7)
+filas = st.selectbox("Número de filas del triángulo", options=list(range(5,14)), index=7)
 
 # Selección de columna inicial (r)
 r_options = list(range(0, filas-1))
