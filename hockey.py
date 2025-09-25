@@ -39,7 +39,7 @@ def plot_hockey_stick(filas, r, longitud):
     # Mostrar suma
     suma = sum(tri[i][r] for i in range(r, n+1))
     punta_valor = tri[punta_coord[0]][punta_coord[1]] if punta_coord else "fuera"
-    ax.set_title(f"Suma del palo = {suma}, Punta = {punta_valor}", fontsize=14)
+    #ax.set_title(f"Suma del palo = {suma}, Punta = {punta_valor}", fontsize=14)
 
     # Ajustar límites
     ax.set_xlim(-filas/2 - 1, filas/2 + 1)
